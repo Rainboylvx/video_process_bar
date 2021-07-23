@@ -1,0 +1,11 @@
+{
+  "name": "video_process_bar",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@gitee.com:Rainboy/video_process_bar.git",
+  "author": "rainboy <rainboylvx@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "canvas": "^2.8.0"
+  }
+}
