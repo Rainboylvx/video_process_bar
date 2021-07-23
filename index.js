@@ -8,6 +8,7 @@ Commander.program.version('0.0.1')
 
 const size = [1920,100]
 var time = 10     //时间长度
+var pbColor = "#222"
 const Config = {
 }
 
@@ -15,6 +16,7 @@ Commander.program
   .name('videoBar')
   .option('-s , --size <size>','bar size,default 1920x100')
   .option('-t , --time <second>','time,default 10s')
+  .option('--pb [pbColor]','processBar color')
   .arguments('<videoBarTextPath>')
   .description('videoBarTextPath',{
     'videoBarTextPath':'a text file with time and title'
@@ -29,6 +31,11 @@ Commander.program
       size[0] = t[0]
       size[1] = t[1]
     }
+
+    if( options.pb) {
+      pbColor = options.pb
+    }
+
     if( options.time ){
       time = str_time_2_seconds(options.time)
 
@@ -64,7 +71,7 @@ console.log( 'Config',Config)
 ///  Do job
 Promise.all([
   createBgBar(size,Config,transformEd_bar_info),
-  createProcessBar(...size,'#222')
+  createProcessBar(...size,pbColor)
 ]).then( ()=>{
   //console.log('====done')
   process.exit(time)
