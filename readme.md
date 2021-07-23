@@ -2,6 +2,16 @@
 
 需要 `ffmpeg`
 
+默认字体: 文泉驿等宽正黑
+
+arch 下载安
+```
+sudo pacman -Sy -y wqy-zenhei ffmpeg nodejs
+git clone xxx
+
+```
+
+
 参数
 
 准备一个文本文件写入时间和标题,默认为`videoBar.txt`，格式如下
@@ -28,3 +38,4 @@
 -fenceBorderColor
 -processColor
 ```
+/usr/share/fonts/wenquanyi/wqy-zenhei/wqy-zenhei.ttc: 文泉驿等宽正黑,WenQuanYi Zen Hei Mono,文泉驛等寬正黑:style=Regular
