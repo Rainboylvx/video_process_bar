@@ -9,5 +9,5 @@ module.exports = (width,height,color) =>{
   ctx.fillStyle = color;
   ctx.fillRect(0, 0, width, height);
 
-  save_canvas_png(canvas,"processBar.png","processBar.png be created!")
+  return save_canvas_png(canvas,"processBar.png","processBar.png be created!")
 }

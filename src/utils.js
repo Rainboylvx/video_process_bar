@@ -1,16 +1,33 @@
 const fs = require("fs")
 
 function save_canvas_png(canvas,path, msg){
-
-  const out = fs.createWriteStream(path)
-  const stream = canvas.createPNGStream()
-  stream.pipe(out)
-  out.on('finish', () =>  console.log(msg || 'The PNG file was created.'))
+  return new Promise( (res,rej)=>{
+    const out = fs.createWriteStream(path)
+    const stream = canvas.createPNGStream()
+    stream.pipe(out)
+    out.on('finish', () => {
+      console.log(msg || 'The PNG file was created.')
+      res()
+    })
+  })
 }
 
 function str_time_2_seconds(str_time){
-  let [h,m,s] = str_time.split(":").map( d => parseInt(d))
-  return h*60*60+m*60+s;
+
+      if( /^\d*$/.test(str_time) ){
+        return parseInt(str_time)
+      }
+      else if( /^\d{1,2}:\d{1,2}$/.test(str_time)){
+        let [m,s] = str_time.split(":").map( d => parseInt(d))
+        return m*60+s;
+      }
+      else if( /^\d{1,2}:\d{1,2}:\d{1,2}$/.test(str_time) ){
+        let [h,m,s] = str_time.split(":").map( d => parseInt(d))
+        return h*60*60+m*60+s;
+      }
+      else {
+        return -1
+      }
 }
 
 
@@ -61,5 +78,6 @@ function TRANSFORMED_BAR_INFO_by_file(path,Width,Height) {
 
 module.exports = {
   save_canvas_png,
-  TRANSFORMED_BAR_INFO_by_file
+  TRANSFORMED_BAR_INFO_by_file,
+  str_time_2_seconds
 }

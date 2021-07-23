@@ -1,13 +1,9 @@
 const Canvas = require("canvas")
 const fs = require('fs')
 const Path = require("path")
-const {save_canvas_png}= require("./utils")
+const {save_canvas_png,str_time_2_seconds}= require("./utils")
 
 
-function str_time_2_seconds(str_time){
-  let [h,m,s] = str_time.split(":").map( d => parseInt(d))
-  return h*60*60+m*60+s;
-}
 module.exports = function(size,config,transformEd_bar_info){
 
 
@@ -73,5 +69,5 @@ module.exports = function(size,config,transformEd_bar_info){
 
 
   // ============== Save_to_png
-  save_canvas_png(canvas,"bgBar.png","bgBar.png be created!")
+  return save_canvas_png(canvas,"bgBar.png","bgBar.png be created!")
 }
