@@ -6,6 +6,7 @@
   "author": "rainboy <rainboylvx@qq.com>",
   "license": "MIT",
   "dependencies": {
-    "canvas": "^2.8.0"
+    "canvas": "^2.8.0",
+    "commander": "^8.0.0"
   }
 }

@@ -84,6 +84,11 @@ code-point-at@^1.0.0:
   resolved "https://registry.nlark.com/code-point-at/download/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
   integrity sha1-DQcLTQQ6W+ozovGkDi7bPZpMz3c=
 
+commander@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.nlark.com/commander/download/commander-8.0.0.tgz?cache=0&sync_timestamp=1624609539421&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcommander%2Fdownload%2Fcommander-8.0.0.tgz#1da2139548caef59bd23e66d18908dfb54b02258"
+  integrity sha1-HaITlUjK71m9I+ZtGJCN+1SwIlg=
+
 concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.npm.taobao.org/concat-map/download/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
