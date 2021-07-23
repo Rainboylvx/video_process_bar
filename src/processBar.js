@@ -1,8 +1,5 @@
 const Canvas = require("canvas")
-const fs     = require('fs')
-const Path   = require("path")
-
-
+const {save_canvas_png}= require("./utils")
 
 module.exports = (width,height,color) =>{
 
@@ -11,4 +8,6 @@ module.exports = (width,height,color) =>{
 
   ctx.fillStyle = color;
   ctx.fillRect(0, 0, width, height);
+
+  save_canvas_png(canvas,"processBar.png","processBar.png be created!")
 }
