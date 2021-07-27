@@ -29,7 +29,7 @@ git clone xxx
 - 最后一行的时间是结束的时间
 
 ```plaintext
--s 1920*100 尺寸，默认1920*100
+-s 1920x100 尺寸，默认1920x100
 -font
 -fontSize
 -fontColor
@@ -38,4 +38,9 @@ git clone xxx
 -fenceBorderColor
 -processColor
 ```
-/usr/share/fonts/wenquanyi/wqy-zenhei/wqy-zenhei.ttc: 文泉驿等宽正黑,WenQuanYi Zen Hei Mono,文泉驛等寬正黑:style=Regular
+
+## 使用
+
+```sh
+./bin/videoBar -s 1920x100 videoBar_sample.txt
+```
