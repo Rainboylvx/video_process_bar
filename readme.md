@@ -30,6 +30,7 @@ git clone xxx
 
 ```plaintext
 -s 1920x100 尺寸，默认1920x100
+--pb [pbColor] processBar color
 -font
 -fontSize
 -fontColor
